@@ -1,15 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    
     <title>drmb | Config files for my GitHub profile.</title>
     
-    <title>Document</title>
-
-    <!-- SEO metadata -->
+    <!-- SEO -->
     <meta name="description" content="Config files for my GitHub profile.">
     <meta property="og:title" content="drmb">
     <meta property="og:locale" content="en_US">
@@ -20,199 +18,132 @@
     <meta name="twitter:card" content="summary">
     <meta property="twitter:title" content="drmb">
 
-<!-- JSON-LD for schema.org -->  
     <script type="application/ld+json">
-        {
-            "@context": "https://schema.org",
-            "@type": "WebSite",
-            "description": "Config files for my GitHub profile.",
-            "headline": "drmb",
-            "name": "drmb",
-            "url": "https://github.com/drmbofficial/drmb"
-        }
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "description": "Config files for my GitHub profile.",
+        "headline": "drmb",
+        "name": "drmb",
+        "url": "https://github.com/drmbofficial/drmb"
+    }
     </script>
 
-    <!-- External Stylesheet -->
-    <link rel="stylesheet" href="/drmb/assets/css/style.css?v=25da9859ff2e8021fce83ba6dc9b49b5d77c67b5">
-
-    <!-- End Jekyll SEO tag -->
-
-    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
-
-    <!-- Setup Google Analytics -->
-
-    <!-- You can set your favicon here -->
-    <!-- link rel="shortcut icon" type="image/x-icon" href="/drmb/favicon.ico" -->
-
-    <!-- end custom head snippets -->
-    
-    <!-- Internal Styles -->
     <style>
-    /* Existing CSS styles */
-    body {
-        margin: 0;
-        font-family: Arial, sans-serif;
-        background-color: black;
-        color: white; /* Setting text color to white */
-    }
+        :root {
+            --bg-color: #000000;
+            --text-color: #ffffff;
+            --accent: #F0B90B;
+        }
 
-    a {
-        color: blue; /* Setting link color to blue */
-    }
+        body.light-theme {
+            --bg-color: #ffffff;
+            --text-color: #000000;
+        }
 
-    main {
-        margin-top: 100px; /* Adjust margin-top to accommodate header height + padding */
-        max-width: 800px;
-        padding: 0 20px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-        
-    .orange-border {
-        border: 2px solid orange;
-        padding: 5px;
-        color: black;
-        font-weight: bold;
-        transition: color 0.3s; /* Adding a smooth transition effect */
-    }
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            transition: background-color 0.3s, color 0.3s;
+        }
 
+        a { color: #3b82f6; }
 
-    .flex-container {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 10px;
-        margin-top: auto;
-        justify-content: center; /* Horizontally center the flex items */
-    }
-    .orange-border:hover {
-        color: white; /* Change color on hover */
-    }
+        header {
+            background-color: var(--accent);
+            color: black;
+            padding: 20px 10px;
+            text-align: center;
+        }
 
-    header {
-      /*position: fixed;*/
-        top: 0;
-        left: 0;
-        right: 0;
-        background-color: #F0B90B;
-        padding: 10px;
-        text-align: center;
-        z-index: 1000; /* Ensure header stays on top */
-        width: 100%;
-    }
+        header h1 {
+            font-size: 46px;
+            margin: 10px 0 20px;
+        }
 
+        .flex-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+        }
 
-    .toggle-circle {
-        width: 15px;
-        height: 15px;
-        border-radius: 50%;
-        background: linear-gradient(to right, black 50%, white 50%);
-        border: none;
-        cursor: pointer;
-        margin-left: auto; /* Push button to the right */
-        margin-right: 20px; /* Adjust right margin */
-        margin-bottom: 0px; /* Adjust right margin */
+        .orange-border {
+            border: 2px solid var(--accent);
+            padding: 8px 14px;
+            font-weight: bold;
+            color: black;
+            transition: all 0.3s ease;
+        }
 
+        .orange-border:hover {
+            background-color: black;
+            color: white;
+        }
 
-    }
+        main {
+            max-width: 800px;
+            margin: 100px auto 80px;
+            padding: 0 20px;
+            line-height: 1.6;
+        }
 
-    header h1 {
-        font-size: 46px;
-        color: black;
-        margin-top: 20px; /* Adding margin to the top of h1 */
-    }
+        .toggle-circle {
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            background: linear-gradient(to right, black 50%, white 50%);
+            border: 2px solid #333;
+            cursor: pointer;
+            margin-top: 10px;
+        }
 
-    /*footer {
-        background-color: #F0B90B;
-        color: #000000;
-        padding: 10px;
-        text-align: center;
-        (Fix to the bottom)
-        flex-shrink: 0; 
-        }*/
-
-    footer {
-       position: fixed;
-        margin-top: 50px;
-        bottom: 0;
-        width: 100%;
-        background-color: #F0B90B;
-        color: #000000;
-        padding: 10px;
-        text-align: center;
-    }
-
-
-    /* Common styles for both themes */
-    body {
-        font-family: Arial, sans-serif;
-        transition: background-color 0.3s, color 0.3s;
-        /* Default dark theme */
-        --background-color: black;
-        --text-color: white;
-    }
-
-    /* Light theme */
-    body.light-theme {
-        --background-color: white;
-        --text-color: black;
-    }
-
-    /* Use CSS variables to set colors */
-    body {
-        background-color: var(--background-color);
-        color: var(--text-color);
-    }
-</style>
+        footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: var(--accent);
+            color: black;
+            text-align: center;
+            padding: 12px;
+            font-size: 14px;
+        }
+    </style>
 </head>
-
 <body>
     <header>
         <h1>drmb</h1>
-        <section class="flex-container">
-            <div class="orange-border">DevOps |Cloud |BackEnd Dev [Golang |Node.js]</div>
+        <div class="flex-container">
+            <div class="orange-border">DevOps | Cloud | BackEnd Dev [Golang | Node.js]</div>
             <div class="orange-border">SaaSiQ (Software as a Service IQ)</div>
-            <div class="orange-border">Technical Writer |Supernal-Science-Scholar</div>
-        </section>
-        <button class="toggle-circle" onclick="toggleTheme()" title="Toggle Theme"></button>
+            <div class="orange-border">Technical Writer | Supernal-Science-Scholar</div>
+        </div>
+        <button class="toggle-circle" onclick="toggleTheme()" title="Toggle light/dark theme"></button>
     </header>
 
-
     <main>
-<h5><a href="https://github.com/drmbofficial/">Home:</a></h5>
-        <p>👋 Hey there, I’m @drmbofficial, your friendly nexus:</p>
+        <h5><a href="https://github.com/drmbofficial/">Home</a></h5>
+        <p>👋 Hey there, I’m <strong>@drmbofficial</strong>, your friendly nexus:</p>
         <p>👀 I am a Supernal Science Scholar who is currently transitioning to tech.</p>
         <p>🌱 Currently, I’m continually expanding my skill set.</p>
         <p>💞️ I’m looking to collaborate on open source.</p>
     </main>
 
+    <footer>
+        <p>&copy; 2023–2026 drmb</p>
+    </footer>
 
-<!-- CSS and HTML structure -->
-
-    <!-- JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js" integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg=" crossorigin="anonymous"></script>
     <script>
-        // JavaScript code
-        document.addEventListener('DOMContentLoaded', function() {
-            // Make sure 'anchors' is defined or loaded before calling anchors.add()
-            anchors.add();
-        });
-
-        // Initially set the dark theme by default
-        document.body.classList.add('dark-theme');
+        // Set dark theme by default
+        if (!document.body.classList.contains('light-theme')) {
+            document.body.classList.add('dark-theme');
+        }
 
         function toggleTheme() {
             document.body.classList.toggle('light-theme');
-            document.body.classList.toggle('dark-theme');
         }
-
     </script>
-
-   
-    <footer>
-        <p>&copy; 2023 drmb</p>
-    </footer>
-
 </body>
-
 </html>
-
