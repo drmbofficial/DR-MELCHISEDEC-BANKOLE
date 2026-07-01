@@ -12,8 +12,6 @@ Cybersecurity aficionado|Supernal-Science-Scholar
 
 💞️ I’m looking to collaborate on opensource.
 
-📫 Reach out to me through my email: drmelchisedecbankole@gmail.com and let's create and innovate! 🚀🌟
-
 <!---
 drmbofficial/drmb is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 You can click the Preview link to take a look at your changes.
